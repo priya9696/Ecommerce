@@ -1,0 +1,52 @@
+{% include 'navbar.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Simple JS Cart
+    </title>
+    {% load static %}
+
+    <script src="{% static 'js/cartjs.js' %}" async></script>
+
+</head>
+
+<body>
+    <div class="p-item">
+        <table cellpadding='10' cellspacing='10' border='1'>
+            <tr>
+                <th>Product</th>
+                <th>price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+            {% for cr in crlist %}
+            <tr>
+                <td>{{cr.pid.Pname}}</td>
+                <td>{{cr.pid.Price}}</td>
+                <td><input type="number" value="{{cr.qty}}" id="qty" onclick=total()></td>
+                <div class="buttonn">
+                    <td>
+                        <button class="btn btn-danger" type=" button ">Remove  </button>
+
+                    </td>
+                </div>
+            </tr>
+    </div>
+
+    {%endfor%}
+    </table>
+
+    </div>
+    </table>
+
+
+
+
+
+
+</body>
+
+</html>
+{% include 'footer.html' %}

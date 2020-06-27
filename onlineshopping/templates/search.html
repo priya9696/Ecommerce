@@ -1,0 +1,6 @@
+{% extends 'base.html' %} {% block centerData %}
+<form action='SearcH' method="POST">
+    {% csrf_token %} &nbsp;&nbsp;
+    <textarea name='st' placeholder="Search.." rows="1" cols="70" title="Type in a category"></textarea> <input type='Submit' value="Search">
+
+</form> &nbsp;&nbsp;&nbsp;&nbsp; {% include 'mainPage.html' %} {% endblock %}

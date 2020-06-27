@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">{% load static %}
+<link href="{% static 'css/stylee.css' %}" rel="stylesheet">
+
+
+<body>
+    <form action='loginpage' method='POST'>
+        {% csrf_token %}
+        <div class="login-box ">
+            <h1>Login</h1>
+
+            <div class="textbox ">
+                <i class="fa fa-user " aria-hidden="true "></i>
+                <input type="text " placeholder="xyz@gmail.com " name="email">
+            </div>
+
+            <div class="textbox ">
+                <i class="fa fa-lock " aria-hidden="true "></i>
+                <input type="text" placeholder="Password" password="Password" name="passw">
+            </div>
+
+            <input class="btn " type='submit' value="Sign In">
+        </div>
+    </form>
+
+</body>
+{% if lmsg is not none %}
+<h1 style="color:red ">{{lmsg}}</h1>
+{% endif %}

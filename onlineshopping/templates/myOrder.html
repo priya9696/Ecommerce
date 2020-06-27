@@ -1,0 +1,26 @@
+{% include 'navbar.html' %}
+<h1>
+    My Orders</h1>
+
+
+<table cellpadding='10' cellspacing='10' border='1'>
+    <tr>
+        <th>Product</th>
+        <th>price</th>
+        <th>Quantity</th>
+
+        <th>Action</th>
+
+    </tr>
+    {% for cr in crlist %}
+    <tr>
+        <td>{{cr.pid.Pname}}</td>
+        <td>{{cr.pid.Price}}</td>
+        <td><input type="number" value="{{cr.qty}}" id="qty" onclick=total()></td>
+
+        <td><a href=" deleteCategory?Cname={{cr.id}} ">Delete</a></td>
+    </tr>
+
+    {%endfor%}
+</table>
+{% include 'footer.html' %}

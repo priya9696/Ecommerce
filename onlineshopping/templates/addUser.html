@@ -1,0 +1,25 @@
+{% include 'navbar.html' %}
+<!DOCTYPE html> {% extends 'base.html' %} {% block centerData %}
+<meta charset="utf-8">{% load static %}
+<link href="{% static 'css/stylee.css' %}" rel="stylesheet">
+<h3>Registration Page:<br><br></h3><br><br>
+
+
+<form class="login-box ">
+
+    <div class="textbox ">
+        <i class="fa fa-user " aria-hidden="true "></i>
+        <input type="text " placeholder="xyz@gmail.com " name="email">
+    </div>
+
+    <div class="textbox ">
+        <i class="fa fa-lock " aria-hidden="true "></i>
+        <input type="text" name="Contact">
+    </div>
+
+    <div class="textbox ">
+        <i class="fa fa-lock " aria-hidden="true "></i>
+        <input type="text" name="Address">
+    </div>
+</form>
+{% include 'footer.html' %}

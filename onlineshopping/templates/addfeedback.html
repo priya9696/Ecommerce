@@ -1,0 +1,15 @@
+{% include 'navbar.html' %}
+
+<h1>Add FeedBack</h1>
+
+<form action='feedb' method='POST'>
+    {% csrf_token %}
+    <table cellpadding='10' cellspacing='10' border='1'>
+        {{form.as_table}}
+        <tr>
+            <td>
+                <input type='Submit' value="Save">
+            </td>
+        </tr>
+    </table>
+</form>{% include 'footer.html' %}

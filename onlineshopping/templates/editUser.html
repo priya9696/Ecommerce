@@ -1,0 +1,17 @@
+{% include 'navbar.html' %}
+<h1>
+    Edit User</h1>
+
+
+<form action="updateUser?email={{email}}" method='POST'>
+    {% csrf_token %}
+    <table cellpadding='10 ' cellspacing='10 ' border='1 '>
+        {{form.as_table}}
+        <tr>
+            <td>
+                <input type='Submit' value="Save">
+            </td>
+        </tr>
+    </table>
+
+</form>{% include 'footer.html' %}

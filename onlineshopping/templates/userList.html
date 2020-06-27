@@ -1,0 +1,21 @@
+{% include 'navbar.html' %}
+<h1>Show User List</h1>
+<table cellpadding='10' cellspacing='10' border='1'>
+    <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Password</th>
+        <th>Action</th>
+    </tr>
+    {%for i in u %}
+    <tr>
+        <td>{{i.email}}</td>
+        <td> {{i.name}}</td>
+        <td> {{i.contact}}</td>
+        <td> {{i.password}}</td>
+        <td><a href="deleteUser?email={{i.email}}">Delete</a></td>
+        <td><a href="editUser?email={{i.email}}">Edit</a></td>
+    </tr>
+    {%endfor%}
+</table>{% include 'footer.html' %}
